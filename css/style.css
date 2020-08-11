@@ -86,6 +86,10 @@ h2 {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 /*logo*/
 .logo-text {
   padding-bottom: 20px;
@@ -229,13 +233,6 @@ h2 {
     ),
     url(../images/header/header_img.jpg);
 }
-
-.hero-banner {
-}
-
-/*.hero .container {
-  padding: 200px 0;
-}*/
 
 .hero-title {
   margin-bottom: var(--margin-right-list);
@@ -573,7 +570,12 @@ h2 {
   width: 370px;
 }
 
-.join-footer .join {
+.footer-subscription-block {
+  padding-top: 72px;
+  padding-bottom: 100px;
+}
+
+.join {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: var(--main-font-size);
@@ -581,6 +583,10 @@ h2 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--third-text-color);
+}
+
+label.join {
+  display: inline-block;
 }
 
 .join-item:not(:last-child) {
@@ -598,6 +604,52 @@ h2 {
 
 .join-item .social-list-item:hover {
   background-color: var(--accent-color);
+}
+
+.footer-mail-field {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  margin-right: 12px;
+  border-color: var(--icon-main-color);
+  color: var(--icon-main-color);
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer-subscription-block-wrapper {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+}
+
+.footer-submit-pic {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: white;
 }
 
 /*Страница портфолио*/
@@ -738,4 +790,243 @@ h2 {
   line-height: 2;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+}
+
+.order-modal-blackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.order-modal-window {
+  padding: 40px;
+  position: absolute;
+  max-width: 528px;
+  left: 50%;
+  top: 50%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-modal-window .header {
+  margin-bottom: 30px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.order-modal-window-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.order-modal-window-item {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.order-modal-window-item {
+  position: relative;
+  list-style: none;
+  margin-bottom: 28px;
+  background-color: white;
+}
+
+.close-icon {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  fill: #000000;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: white;
+}
+.close-icon-pic {
+  width: 11px;
+  height: 11px;
+}
+
+.close-icon:hover {
+  fill: var(--accent-color);
+}
+
+.order-modal-window-item .input {
+  width: 100%;
+  height: 40px;
+  padding: 0px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.input:focus + .client-input-label,
+.input:not(:placeholder-shown) + .client-input-label {
+  color: #2196f3;
+  transform: translateY(-40px);
+  left: 16px;
+  transition: 250ms linear;
+}
+
+.input:focus ~ .input-name-field-pic {
+  fill: var(--accent-color);
+}
+
+.client-input-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+}
+
+.input-name-field-pic {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  fill: #212121;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+}
+
+.modal-window-textarea-wrapper {
+  position: relative;
+}
+
+.order-modal-window .textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: black;
+  font-size: 16px;
+}
+
+.textarea-label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.modal-window-textarea-wrapper:focus-within .textarea-label,
+.textarea:not(:placeholder-shown) ~ .textarea-label {
+  color: #2196f3;
+  transform: translateY(-32px);
+  left: 16px;
+  transition: 250ms linear;
+}
+
+.order-modal-window-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.order-modal-window-checkbox {
+  -webkit-appearance: none;
+}
+
+.order-modal-window-checkbox:checked + .checkbox-icon {
+  width: 16px;
+  height: 15px;
+  fill: white;
+  background: #2196f3;
+  border: none;
+  border-radius: 2px;
+  background-image: url(../images/order_modal_window/checkbox-active-button.svg);
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-color: black;
+  border: 2px solid;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.order-modal-window-agreement {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.order-modal-window-agreement::before {
+  background-image: url(../images/order_modal_window/checkbox-button.svg);
+}
+
+.order-modal-window-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196f3;
+}
+
+.order-modal-window-submit-button {
+  width: 200px;
+  height: 50px;
+  display: block;
+  margin: auto;
+  padding: 0;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
 }

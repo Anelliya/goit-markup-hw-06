@@ -55,7 +55,7 @@
         <section class="hero">
             <div class="hero-banner">
                 <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-                <button type="button" class="modal-btn">Заказать услугу</button>
+                <button type="button" data-modal-open class="modal-btn">Заказать услугу</button>
             </div>
         </section>
 
@@ -354,10 +354,82 @@
                         </a>
                     </li>
                 </ul>
+            </section>
+            <section class="footer-subscription-block">
+                <table class="footer-subscribthion-block">
+                    <label class="join">
+                        Подпишитесь на рассылку
+                        <div class="footer-subscription-block-wrapper">
+                            <input class="footer-mail-field" type="email" name="email" value="E-mail">
+                            <button class="footer-submit-button" type="submit">Подписаться
+                                <svg class="footer-submit-pic">
+                                    <use href="./images/sprite.svg#send-pic"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </label>
+                </table>
 
             </section>
         </div>
     </footer>
+
+    <!--Modal-window-->
+
+
+    <div data-modal class="order-modal-blackdrop is-hidden">
+        <div class="order-modal-window">
+            <button data-modal-close class="close-icon">
+                <svg class="close-icon-pic">
+                    <use href=./images/sprite.svg#close-pic></use>
+                </svg>
+            </button>
+            <h2 class="header">Оставьте свои данные, мы вам перезвоним</h2>
+            <form>
+                <ul class="order-modal-window-list">
+                    <li class="order-modal-window-item">
+                        <input class="input" type="text" name="name" id="client-name" placeholder=" ">
+                        <label class="client-input-label" for="client-name">Имя</label>
+                        <svg class="input-name-field-pic">
+                            <use href="./images/sprite.svg#person-pic"></use>
+                        </svg>
+                    </li>
+                    <li class="order-modal-window-item">
+                        <input class="input" type="text" name="tel" id="client-tel" placeholder=" ">
+                        <label class="client-input-label" for="client-tel">Телефон</label>
+                        <svg class="input-name-field-pic">
+                            <use href="./images/sprite.svg#phone-pic"></use>
+                        </svg>
+                    </li>
+                    <li class="order-modal-window-item">
+                        <input class="input" type="text" name="mail" id="client-mail" placeholder=" ">
+                        <label class="client-input-label" for="client-mail">Почта</label>
+                        <svg class="input-name-field-pic">
+                            <use href="./images/sprite.svg#mail-pic"></use>
+                        </svg>
+                    </li>
+                </ul>
+                <div class="modal-window-textarea-wrapper">
+                    <textarea class="order-modal-window-item textarea" id="modal-window-textarea" name="textarea"
+                        cols=" 30" placeholder=" " rows="10"></textarea>
+                    <label for="modal-window-textarea" class="textarea-label">
+                        Комментарий
+                    </label>
+                </div>
+
+                <label class="order-modal-window-label">
+                    <input type="checkbox" class="order-modal-window-checkbox" name="checkbox">
+                    <span class="checkbox-icon">
+                    </span>
+                    <span class="order-modal-window-agreement">Соглашаюсь с рассылкой и принимаю
+                        <a class="order-modal-window-link" href="">Условия
+                            договора</a></span>
+                </label>
+                <button class="order-modal-window-submit-button">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
